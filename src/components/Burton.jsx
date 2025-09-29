@@ -11,7 +11,7 @@ function Burton() {
 
   ];
   return (
-    <div className='mx-2'>
+    <div className='mx-4'>
       <div className='text-2xl text-center'>Burton Corblin Compressors</div>
       <div className='text-2xl text-center pb-4'>Output - 550 BAR</div>
 

@@ -1,20 +1,17 @@
 import { useState } from 'react'
 
 import './App.css'
-import HightPressureNetwork from './components/HightPressureNetwork'
+import HightPressureNetwork from './components/slides/HightPressureNetwork'
 import TemperatureHumidity from './components/TemperatureHumidity'
-import CompressedAir from './components/CompressedAir'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className="grid grid-cols-10 gap-4">
-
-      <div className="col-span-8">
+    <div className="grid grid-cols-12 gap-4 max-h-[98vh]">
+      <div className="col-span-9">
         <HightPressureNetwork />
       </div>
-      <div className='col-span-2'>
+      <div className='col-span-3'>
         <TemperatureHumidity />
       </div>
     </div>
