@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Hofer() {
+function Mid() {
   return (
     <div className=''>
       <h2>HOFER Compressors</h2>
@@ -22,4 +22,4 @@ function Hofer() {
   )
 }
 
-export default Hofer
+export default Mid
