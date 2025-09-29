@@ -2,7 +2,7 @@ import React from 'react'
 
 function Maximator() {
   return (
-    <div className='max-w-1/2'>
+    <div className=''>
       <h2>Maximator Boosters</h2>
       <h3>Output - 950 BAR</h3>
 
@@ -17,7 +17,6 @@ function Maximator() {
           <p className="text-gray-700 mb-1">This is the first line of text.</p>
           <p className="text-gray-600">This is the second line of text.</p>
         </div>
-
       </div>
     </div>
   )

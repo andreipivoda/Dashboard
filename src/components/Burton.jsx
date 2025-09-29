@@ -10,7 +10,7 @@ function Burton() {
 
   ];
   return (
-    <div className='max-w-1/2'>
+    <div className=''>
       <h2>Burton Corblin Compressors</h2>
       <h3>Output - 550 BAR</h3>
 
