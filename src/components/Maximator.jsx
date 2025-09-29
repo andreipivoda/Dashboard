@@ -1,22 +1,17 @@
 import React from 'react'
+import MyGauge from './MyGauge'
+import ComplexCard from './ComplexCard'
 
 function Maximator() {
   return (
-    <div className=''>
-      <h2>Maximator Boosters</h2>
-      <h3>Output - 950 BAR</h3>
+    <div className='mx-2'>
+
+      <div className='text-2xl text-center'>Maximator Boosters</div>
+      <div className='text-2xl text-center pb-4'>Output - 950 BAR</div>
 
       <div className="grid grid-cols-2 gap-4">
-        <div className="bg-red-500 rounded-lg shadow p-6">
-          <h2 className="text-xl font-semibold mb-2">Card Title</h2>
-          <p className="text-gray-700 mb-1">This is the first line of text.</p>
-          <p className="text-gray-600">This is the second line of text.</p>
-        </div>
-        <div className="bg-red-500 rounded-lg shadow p-6">
-          <h2 className="text-xl font-semibold mb-2">Card Title</h2>
-          <p className="text-gray-700 mb-1">This is the first line of text.</p>
-          <p className="text-gray-600">This is the second line of text.</p>
-        </div>
+        <ComplexCard />
+        <ComplexCard />
       </div>
     </div>
   )

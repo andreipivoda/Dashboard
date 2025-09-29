@@ -1,4 +1,5 @@
 import React from 'react'
+import SimpleCard from './SimpleCard';
 
 function Burton() {
 
@@ -10,31 +11,15 @@ function Burton() {
 
   ];
   return (
-    <div className=''>
-      <h2>Burton Corblin Compressors</h2>
-      <h3>Output - 550 BAR</h3>
+    <div className='mx-2'>
+      <div className='text-2xl text-center'>Burton Corblin Compressors</div>
+      <div className='text-2xl text-center pb-4'>Output - 550 BAR</div>
 
       <div className="grid grid-cols-2 gap-4">
-        <div className="bg-red-500 rounded-lg shadow p-6">
-          <h2 className="text-xl font-semibold mb-2">Card Title</h2>
-          <p className="text-gray-700 mb-1">This is the first line of text.</p>
-          <p className="text-gray-600">This is the second line of text.</p>
-        </div>
-        <div className="bg-red-500 rounded-lg shadow p-6">
-          <h2 className="text-xl font-semibold mb-2">Card Title</h2>
-          <p className="text-gray-700 mb-1">This is the first line of text.</p>
-          <p className="text-gray-600">This is the second line of text.</p>
-        </div>
-        <div className="bg-red-500 rounded-lg shadow p-6">
-          <h2 className="text-xl font-semibold mb-2">Card Title</h2>
-          <p className="text-gray-700 mb-1">This is the first line of text.</p>
-          <p className="text-gray-600">This is the second line of text.</p>
-        </div>
-        <div className="bg-red-500 rounded-lg shadow p-6">
-          <h2 className="text-xl font-semibold mb-2">Card Title</h2>
-          <p className="text-gray-700 mb-1">This is the first line of text.</p>
-          <p className="text-gray-600">This is the second line of text.</p>
-        </div>
+        <SimpleCard title={'Compressor 2(ACH)'}/>
+        <SimpleCard title={'Compressor 3(ACH)'}/>
+        <SimpleCard title={'Compressor 4(ACH)'}/>
+        <SimpleCard title={'Compressor 5(ACH)'}/>
       </div>
     </div>
   )

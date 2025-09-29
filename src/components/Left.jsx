@@ -5,7 +5,7 @@ import Maximator from './Maximator'
 
 export default function Left() {
   return (
-    <div className='bg-amber-900'>
+    <div className='min-h-[95vh] flex flex-col justify-around border rounded-2xl border-gray-400'>
       <Burton />
       <Maximator/>
     </div>
