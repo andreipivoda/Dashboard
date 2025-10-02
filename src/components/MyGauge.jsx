@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { RadialGauge } from 'canvas-gauges';
 
-function Gauge({unit,size = 160}) {
+function Gauge({unit,size = 170}) {
   const gaugeRef = useRef(null);
   const gaugeInstance = useRef(null);
 
