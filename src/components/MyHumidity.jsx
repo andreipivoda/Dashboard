@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { LinearGauge } from 'canvas-gauges';
 
-function MyTemp() {
+function MyHumidity() {
   const gaugeRef = useRef(null);
   const gaugeInstance = useRef(null);
 
@@ -71,4 +71,4 @@ function MyTemp() {
   return <canvas ref={gaugeRef}></canvas>;
 }
 
-export default MyTemp;
+export default MyHumidity;

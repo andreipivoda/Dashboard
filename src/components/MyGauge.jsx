@@ -1,21 +1,20 @@
 import React, { useEffect, useRef } from 'react';
 import { RadialGauge } from 'canvas-gauges';
 
-function Gauge({unit,size = 170}) {
+function Gauge({ unit, size = 170, value }) {
   const gaugeRef = useRef(null);
   const gaugeInstance = useRef(null);
 
   useEffect(() => {
-
     gaugeInstance.current = new RadialGauge({
       renderTo: gaugeRef.current,
       width: size,
       height: size,
       units: unit,
       minValue: 0,
-      maxValue: 220,
+      maxValue: 1220,
       majorTicks: [
-        "0", "20", "40", "60", "80", "100", "120", "140", "160", "180", "200", "220"
+        "0", "20", "40", "60", "80", "100", "120", "140", "160", "180", "200", "1220"
       ],
       minorTicks: 2,
       strokeTicks: true,
@@ -37,23 +36,17 @@ function Gauge({unit,size = 170}) {
     gaugeInstance.current.draw();
 
     return () => {
-      // Cleanup când componenta se demontează
       gaugeInstance.current = null;
     };
   }, []);
 
-  // Poți actualiza valoarea gauge-ului printr-o funcție sau state
-  const updateValue = (val) => {
-    if (gaugeInstance.current) {
-      gaugeInstance.current.value = val;
-    }
-  };
-
-  // Exemplu: update valoare după 3 secunde
+  // 🔁 Update value whenever the `value` prop changes
   useEffect(() => {
-    const timer = setTimeout(() => updateValue(120), 3000);
-    return () => clearTimeout(timer);
-  }, []);
+    const numericValue = Number(value);
+    if (gaugeInstance.current && !isNaN(numericValue)) {
+      gaugeInstance.current.value = value;
+    }
+  }, [value]);
 
   return <canvas ref={gaugeRef}></canvas>;
 }
