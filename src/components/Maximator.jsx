@@ -9,7 +9,7 @@ function Maximator() {
     const [max5, setMax5] = useState({ name: 'loading' });
   
     useEffect(() => {
-      if (data) {
+     if (Array.isArray(data)) {
         const max4 = data.find(item => item.name === "Maximator 4 - ACH");
         const max5 = data.find(item => item.name === "Maximator 5 - ACH");
         max4 && setMax4(max4);

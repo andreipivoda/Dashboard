@@ -10,7 +10,7 @@ function Mid() {
   const [compresor2, setCompresor2] = useState({ name: 'loading...', last_update: 'loading...' });
 
   useEffect(() => {
-    if (data) {
+    if (Array.isArray(data)) {
       const c2 = data.find(item => item.name === "Compresor 1 - ACH");
       const c3 = data.find(item => item.name === "Compresor 2 - ACH");
 

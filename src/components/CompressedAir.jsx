@@ -10,7 +10,7 @@ function CompressedAir() {
 
 
   useEffect(() => {
-    if (data) {
+    if (Array.isArray(data)) {
       const usc1 = data.find(item => item.name === "Uscator 1");
       const usc2 = data.find(item => item.name === "Uscator 2");
 

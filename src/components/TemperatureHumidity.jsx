@@ -15,7 +15,7 @@ function TemperatureHumidity() {
   const [humi3, setHumi3] = useState({ name: 'loading...', last_update: 'loading...' });
 
   useEffect(() => {
-    if (data) {
+    if (Array.isArray(data)) {
       const temp1 = data.find(item => item.name === "Zona C1");
       const temp2 = data.find(item => item.name === "Zona GG2");
       const temp3 = data.find(item => item.name === "Zona MGC");

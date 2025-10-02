@@ -11,7 +11,7 @@ function Right() {
   const [max3, setMax3] = useState({ name: 'loading...', last_update: 'loading...' });
 
   useEffect(() => {
-    if (data) {
+    if (Array.isArray(data)) {
       const max1 = data.find(item => item.name === "Booster 1 - ACH");
       const max2 = data.find(item => item.name === "Booster 2 - ACH");
       const max3 = data.find(item => item.name === "MAXITEC 3 - (ASH/APH)");

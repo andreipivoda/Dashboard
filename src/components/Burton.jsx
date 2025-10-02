@@ -10,7 +10,7 @@ function Burton() {
   const [compresor5, setCompresor5] = useState({ name: 'loading' });
 
   useEffect(() => {
-    if (data) {
+    if (Array.isArray(data)) {
       const c2 = data.find(item => item.name === "Compresor 2 - ACH");
       const c3 = data.find(item => item.name === "Compresor 3 - ACH");
       const c4 = data.find(item => item.name === "Compresor 4 - ACH");
